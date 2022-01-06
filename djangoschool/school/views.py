@@ -7,3 +7,6 @@ def HomePage(request):
 
 def AboutPage(request):
     return render(request, 'school/about.html')
+
+def ContactUs(request):
+    return render(request, 'school/contact.html')
