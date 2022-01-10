@@ -1,0 +1,27 @@
+{% extends 'school/base.html' %}    <!-- extend is to copy the whole base template-->
+
+{% block content %}
+
+<div class="container">
+    <center>
+    <table style="width:100%">
+        <tr>    
+            <th>Subject</th>
+            <th>Name</th>
+            <th>Score</th>
+        </tr>
+        {% for sc in score %}       
+        <!-- #sc is one of the filed in score from view.py -->
+        <tr>    
+            <td>{{sc.subject}}</td>
+            <td>{{sc.student_name}}</td>
+            <td>{{sc.score}}</td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+    </center>
+</div>
+
+{% endblock content %}
+
